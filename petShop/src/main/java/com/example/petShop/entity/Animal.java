@@ -11,7 +11,7 @@ public class Animal {
     @Id
     private String id;
     private String nome;
-    private String especies;
+    private String especie;
     private String raca;
     private Situacao situacao;
     private Porte porte;
@@ -36,12 +36,12 @@ public class Animal {
         this.nome = nome;
     }
 
-    public String getEspecies() {
-        return especies;
+    public String getEspecie() {
+        return especie;
     }
 
-    public void setEspecies(String especies) {
-        this.especies = especies;
+    public void setEspecie(String especie) {
+        this.especie = especie;
     }
 
     public String getRaca() {

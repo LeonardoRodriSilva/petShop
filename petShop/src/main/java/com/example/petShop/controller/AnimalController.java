@@ -1,5 +1,8 @@
 package com.example.petShop.controller;
 
+import com.example.petShop.DTO.request.AtualizarAnimalRequest;
+import com.example.petShop.DTO.request.CriarAnimalResquest;
+import com.example.petShop.DTO.response.AnimalResponse;
 import com.example.petShop.Service.AnimalService;
 import com.example.petShop.entity.Animal;
 import org.springframework.http.ResponseEntity;
@@ -18,25 +21,27 @@ public class AnimalController {
     }
 
     @GetMapping
-    public List<Animal> listarTodos() {
+    public List<AnimalResponse> listarTodos() {
         return animalService.listarTodos();
     }
 
     @PostMapping
-    public Animal salvar(@RequestBody Animal animal) {
-        return animalService.salvar(animal);
+    public ResponseEntity<AnimalResponse> salvar(@RequestBody CriarAnimalResquest resquest) {
+        AnimalResponse response = animalService.salvar(resquest);
+        return ResponseEntity.status(201).body(response);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Animal> buscarPorId(@PathVariable String id) {
+    public ResponseEntity<AnimalResponse> buscarPorId(@PathVariable String id) {
         return animalService.buscarPorId(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PutMapping("/{id}")
-    public Animal salvar(@PathVariable String id, @RequestBody Animal animalAtualizado) {
-        return animalService.atualizar(id, animalAtualizado);
+    public ResponseEntity<AnimalResponse> atualizar(@PathVariable String id, @RequestBody AtualizarAnimalRequest request) {
+        AnimalResponse response = animalService.atualizar(id, request);
+        return ResponseEntity.ok(response);
     }
 
     @DeleteMapping("/{id}")
