@@ -1,10 +1,8 @@
 package com.example.petShop.repository;
 
-import com.example.petShop.entity.Animal;
+import com.example.petShop.entity.Abrigo;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface AnimalRepository extends MongoRepository<Animal, String> {
+public interface AbrigoRepository extends MongoRepository <Abrigo, String> {
     // Métodos adicionais de consulta podem ser definidos aqui, se necessário
 }

@@ -1,10 +1,9 @@
 package com.example.petShop.controller;
 
-import com.example.petShop.DTO.request.AtualizarAnimalRequest;
-import com.example.petShop.DTO.request.CriarAnimalResquest;
-import com.example.petShop.DTO.response.AnimalResponse;
+import com.example.petShop.DTO.request.AnimalRequests.AtualizarAnimalRequest;
+import com.example.petShop.DTO.request.AnimalRequests.CriarAnimalResquest;
+import com.example.petShop.DTO.response.Animal.AnimalResponse;
 import com.example.petShop.Service.AnimalService;
-import com.example.petShop.entity.Animal;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

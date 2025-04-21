@@ -1,4 +1,4 @@
-package com.example.petShop.DTO.response;
+package com.example.petShop.DTO.response.Animal;
 
 import java.time.LocalDate;
 

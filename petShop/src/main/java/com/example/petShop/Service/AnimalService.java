@@ -1,8 +1,8 @@
 package com.example.petShop.Service;
 
-import com.example.petShop.DTO.request.AtualizarAnimalRequest;
-import com.example.petShop.DTO.request.CriarAnimalResquest;
-import com.example.petShop.DTO.response.AnimalResponse;
+import com.example.petShop.DTO.request.AnimalRequests.AtualizarAnimalRequest;
+import com.example.petShop.DTO.request.AnimalRequests.CriarAnimalResquest;
+import com.example.petShop.DTO.response.Animal.AnimalResponse;
 import com.example.petShop.entity.Animal;
 import com.example.petShop.repository.AnimalRepository;
 import org.springframework.stereotype.Service;

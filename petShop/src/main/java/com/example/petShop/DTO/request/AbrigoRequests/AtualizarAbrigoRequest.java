@@ -1,23 +1,9 @@
-package com.example.petShop.entity;
+package com.example.petShop.DTO.request.AbrigoRequests;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "abrigos")
-public class Abrigo {
-    @Id
-    private String id;
+public class AtualizarAbrigoRequest {
     private String responsavel;
     private Long capacidadeTotal;
     private String localizacao;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getResponsavel() {
         return responsavel;
@@ -42,5 +28,4 @@ public class Abrigo {
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
     }
-
 }

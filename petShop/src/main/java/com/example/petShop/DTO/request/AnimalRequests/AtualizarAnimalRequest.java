@@ -1,4 +1,4 @@
-package com.example.petShop.DTO.request;
+package com.example.petShop.DTO.request.AnimalRequests;
 
 import java.time.LocalDate;
 
@@ -10,9 +10,7 @@ public class AtualizarAnimalRequest {
     private LocalDate dataNascimento;
     private Boolean disponivelParaAdocao;
 
-    public String getEspecie() {
-        return especie;
-    }
+    public String getEspecie() { return especie; }
 
     public void setEspecie(String especie) {
         this.especie = especie;
