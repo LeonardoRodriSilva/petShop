@@ -15,10 +15,6 @@ public class Abrigo {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getResponsavel() {
         return responsavel;
     }

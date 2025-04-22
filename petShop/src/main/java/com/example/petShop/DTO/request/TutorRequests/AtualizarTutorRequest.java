@@ -1,22 +1,12 @@
-package com.example.petShop.entity;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+package com.example.petShop.DTO.request.TutorRequests;
 
 import java.time.LocalDate;
 
-@Document(collection = "tutores")
-public class Tutor {
-    @Id
-    private String id;
+public class AtualizarTutorRequest {
     private String nome;
     private String cpf;
     private LocalDate dataNascimento;
     private String localizacao;
-
-    public String getId() {
-        return id;
-    }
 
     public String getNome() {
         return nome;

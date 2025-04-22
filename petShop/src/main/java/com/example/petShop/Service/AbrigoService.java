@@ -63,7 +63,7 @@ public class AbrigoService {
         return abrigoResponse;
     }
 
-    public void atualizarEntidade(Abrigo abrigo, AtualizarAbrigoRequest request) {
+    private void atualizarEntidade(Abrigo abrigo, AtualizarAbrigoRequest request) {
         abrigo.setResponsavel(request.getResponsavel());
         abrigo.setCapacidadeTotal(request.getCapacidadeTotal());
         abrigo.setLocalizacao(request.getLocalizacao());
