@@ -1,14 +1,11 @@
-package com.example.petShop.entity;
+package com.example.petShop.DTO.response.Voluntario;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.example.petShop.entity.Funcao;
 
 import java.time.LocalDate;
 import java.util.List;
 
-@Document(collection = "voluntarios")
-public class Voluntario {
-    @Id
+public class VoluntarioResponse {
     private String id;
     private String nome;
     private String cpf;
@@ -18,6 +15,10 @@ public class Voluntario {
 
     public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNome() {

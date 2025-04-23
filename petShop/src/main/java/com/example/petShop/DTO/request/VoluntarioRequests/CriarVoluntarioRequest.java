@@ -1,24 +1,16 @@
-package com.example.petShop.entity;
+package com.example.petShop.DTO.request.VoluntarioRequests;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.example.petShop.entity.Funcao;
 
 import java.time.LocalDate;
 import java.util.List;
 
-@Document(collection = "voluntarios")
-public class Voluntario {
-    @Id
-    private String id;
+public class CriarVoluntarioRequest {
     private String nome;
     private String cpf;
     private LocalDate dataNascimento;
     private String localizacao;
     private List<Funcao> funcoes;
-
-    public String getId() {
-        return id;
-    }
 
     public String getNome() {
         return nome;
